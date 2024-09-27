@@ -18,14 +18,18 @@
             age--;
         }
 
-        document.getElementById("ageDisplay").textContent = "I am " + age + " years old.";
+        document.getElementById("ageDisplay").textContent = "I am " + age + " years old."
+            + gortBithday.toString() + today.toString() + ', ' +
+            gortBirthday.getMonth() - today.getMonth()) < 0 + ', ' +
+            gortBirthday.getMonth() - today.getMonth()) === 0 + ', ' +
+            gortBirthday.getDate() > today.getDate();
     </script>
 
     <nav>
         <h2>Navigation</h2>
         <ul>
             <!-- These are links to other pages or documents -->
-            <li><a href="about.html">PlaceholderEdit2</a></li>
+            <li><a href="about.html">PlaceholderEdit1</a></li>
             <li><a href="docs/tutorial.md">Tutorial Document</a></li>
             <li><a href="https://github.com/myusername/myrepository">View the GitHub Repository</a></li>
         </ul>
