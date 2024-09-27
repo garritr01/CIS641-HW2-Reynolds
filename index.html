@@ -13,7 +13,8 @@
         const today = new Date ();
         let age = today.getFullYear() - gortBirthday.getFullYear();
             
-        if ((gortBirthday.getMonth() - today.getMonth()) <= 0 && (gortBirthday.getDate() - today.getDate()) <= 0){
+        if ((gortBirthday.getMonth() - today.getMonth()) < 0 || 
+            ((gortBirthday.getMonth() - today.getMonth()) == 0 && (gortBirthday.getDate() - today.getDate()) <= 0)){
             age--;
         }
 
