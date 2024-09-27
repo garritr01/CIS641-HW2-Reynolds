@@ -6,20 +6,19 @@
     <title>My GitHub Pages Site</title> <!-- This is the title that appears in the browser tab -->
 </head>
 <body>
-    <header>
-        <h1>Welcome to GarritHub</h1>
-        <script>
-            const gortBirthday = new Date ("2001-12-27");
-            const today = new Date ();
-            let age = today.getFullYear() - gortBirthday.getFullYear();
+    <h1>Welcome to GarritHub</h1>
+    <p id="ageDisplay"></p>
+    <script>
+        const gortBirthday = new Date ("2001-12-27");
+        const today = new Date ();
+        let age = today.getFullYear() - gortBirthday.getFullYear();
             
-            if ((gortBirthday.getMonth() - today.getMonth()) <= 0 && (gortBirthday.getDate() - today.getDate()) <= 0){
-                age--;
-            }
+        if ((gortBirthday.getMonth() - today.getMonth()) <= 0 && (gortBirthday.getDate() - today.getDate()) <= 0){
+            age--;
+        }
 
-            document.getElementByID("age").textContent = "I am " + age + " years old.";
-        </script>
-    </header>
+        document.getElementByID("ageDisplay").textContent = "I am " + age + " years old.";
+    </script>
 
     <nav>
         <h2>Navigation</h2>
