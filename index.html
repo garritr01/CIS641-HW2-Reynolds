@@ -9,27 +9,30 @@
     <h1>Welcome to GarritHub</h1>
     <p id="ageDisplay"></p>
     <script>
-        const gortBirthday = new Date ("2001-12-27");
-        const today = new Date ();
+        const gortBirthday = new Date("2001-12-27");
+        const today = new Date();
         let age = today.getFullYear() - gortBirthday.getFullYear();
-            
+
         if ((gortBirthday.getMonth() - today.getMonth()) < 0 || 
-            ((gortBirthday.getMonth() - today.getMonth()) === 0 && gortBirthday.getDate() > today.getDate())){
+            (gortBirthday.getMonth() === today.getMonth() && gortBirthday.getDate() > today.getDate())) {
             age--;
         }
 
-        document.getElementById("ageDisplay").textContent = "I am " + age + " years old."
-            + gortBithday.toString() + today.toString() + ', ' +
-            gortBirthday.getMonth() - today.getMonth()) < 0 + ', ' +
-            gortBirthday.getMonth() - today.getMonth()) === 0 + ', ' +
-            gortBirthday.getDate() > today.getDate();
+        // Print out truth values
+        document.getElementById("ageDisplay").textContent = 
+            "I am " + age + " years old. " +
+            "Birthday: " + gortBirthday.toString() + ", " +
+            "Today: " + today.toString() + ", " +
+            "Month Comparison ( < 0 ): " + ((gortBirthday.getMonth() - today.getMonth()) < 0) + ", " +
+            "Month Comparison ( === 0 ): " + ((gortBirthday.getMonth() - today.getMonth()) === 0) + ", " +
+            "Date Comparison ( > ): " + (gortBirthday.getDate() > today.getDate());
     </script>
 
     <nav>
         <h2>Navigation</h2>
         <ul>
             <!-- These are links to other pages or documents -->
-            <li><a href="about.html">PlaceholderEdit1</a></li>
+            <li><a href="about.html">PlaceholderEdit0</a></li>
             <li><a href="docs/tutorial.md">Tutorial Document</a></li>
             <li><a href="https://github.com/myusername/myrepository">View the GitHub Repository</a></li>
         </ul>
