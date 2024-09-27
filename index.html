@@ -13,8 +13,9 @@
         const today = new Date();
         let age = today.getFullYear() - gortBirthday.getFullYear();
 
-        if ((gortBirthday.getMonth() - today.getMonth()) < 0 || 
-            (gortBirthday.getMonth() === today.getMonth() && gortBirthday.getDate() > today.getDate())) {
+        if ( gortBirthday.getMonth() > today.getMonth() || 
+            (gortBirthday.getMonth() === today.getMonth() && gortBirthday.getDate() > today.getDate())
+           ){
             age--;
         }
 
@@ -23,9 +24,9 @@
             "I am " + age + " years old. " +
             "Birthday: " + gortBirthday.toString() + ", " +
             "Today: " + today.toString() + ", " +
-            "Month Comparison ( < 0 ): " + ((gortBirthday.getMonth() - today.getMonth()) < 0) + ", " +
-            "Month Comparison ( === 0 ): " + ((gortBirthday.getMonth() - today.getMonth()) === 0) + ", " +
-            "Date Comparison ( > ): " + (gortBirthday.getDate() > today.getDate());
+            "Month Comparison ( < 0 ): " + gortBirthday.getMonth() > today.getMonth() + ", " +
+            "Month Comparison ( === 0 ): " + gortBirthday.getMonth() === today.getMonth() + ", " +
+            "Date Comparison ( > ): " + gortBirthday.getDate() > today.getDate();
     </script>
 
     <nav>
