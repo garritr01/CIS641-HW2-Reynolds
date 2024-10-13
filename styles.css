@@ -1,0 +1,111 @@
+* {
+    overflow: visible;
+    box-sizing: border-box;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+body {
+    background-color: #d7e5ee;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    color: #4c4c6f;
+    text-align: left;
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+h2 {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 8px;
+    color: #4c4c6f;
+    text-align: left;
+    font-size: 20px;
+}
+
+h3 {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 16px;
+    color: #4c4c6f;
+    text-align: left;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: #2f2fb3;
+}
+
+p {
+    text-decoration: none;
+    color: #4c4c6f;
+    font-size: 14px;
+}
+
+.p16 {
+    text-decoration: none;
+    color: #4c4c6f;
+    font-size: 14px;
+    margin-left: 16px;
+    margin-bottom: 4px;
+}
+
+.bulletList p {
+    position: relative;
+    margin-left: 16px;
+}
+
+.bulletList p::before {
+    content: "•";
+}
+
+iframe {
+    margin: 0px;
+    border: none;
+    width: 100%;
+}
+
+.acronym {
+    position: relative;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.expand {
+    display: none;
+    position: absolute;
+    text-align: center;
+    top: -100%;
+    background-color: #d7e5ee;
+    border: 1px solid #4c4c6f;
+    white-space: nowrap;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.dropdownLink {
+    position: relative;
+    cursor: pointer;
+    color: #4c4c6f;
+    font-size: 14px;
+    border-right: 2px solid #4c4c6f;
+    border-bottom: 2px solid #4c4c6f;
+    line-height: 1.5;
+}
+
+.dropdown {
+    display: none;
+    position: relative;
+    top: -100%;
+    background-color: #d7e5ee;
+    white-space: nowrap;
+    text-decoration: none;
+    color: #4c4c6f;
+    font-size: 14px;
+    padding-left: 16px;
+    line-height: 1.5;
+}

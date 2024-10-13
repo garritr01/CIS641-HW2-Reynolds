@@ -4,37 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My GitHub Pages Site</title> <!-- This is the title that appears in the browser tab -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="displayCorrections.js"></script>
+    <script>
+        let iframes = [];
+        addListener(log = 0);
+        let resizeTimeout;
+
+        window.onresize = function () {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function () {
+                iframes.forEach(frameID => {
+                    const frame = document.getElementById(frameID);
+                    frame.style.width = window.innerWidth + 'px';
+                    frame.contentWindow.location.reload();
+                });
+            }, 250);
+        };
+    </script>
 </head>
 <body>
-    <h1>Welcome to GarritHub</h1>
-    <p id="ageDisplay"></p>
-    <script>
-        const gortBirthday = new Date("2001-12-27");
-        const today = new Date();
-        let age = today.getFullYear() - gortBirthday.getFullYear();
-
-        if ( gortBirthday.getMonth() > today.getMonth() || 
-            (gortBirthday.getMonth() === today.getMonth() && gortBirthday.getDate() > today.getDate())
-           ){
-            age--;
-        }
-
-        // Print out truth values
-        document.getElementById("ageDisplay").textContent = "I am " + age + " years old.";
-    </script>
-
-    <nav>
-        <h2>Navigation</h2>
-        <ul>
-            <!-- These are links to other pages or documents -->
-            <li><a href="about.html">PlaceholderLinkA</a></li>
-            <li><a href="docs/tutorial.md">PlaceholderLinkB</a></li>
-            <li><a href="https://github.com/myusername/myrepository">PlaceholderLinkC</a></li>
-        </ul>
-    </nav>
-
-    <footer>
-        <p>© 2024 My GitHub Pages Site</p>
-    </footer>
+    <div>
+        <h1>Welcome to GarritHub</h1>
+        <h2>HW2 Info - Garrit Reynolds</h2>
+        <div class="bulletList">
+            <h3>Interests</h3>
+            <p>
+                I'm an avid gamer. I play a mix of games from rpgs to sports. My favorite game is rocket league, which I have been
+                playing at a very mediocre level for the last eight years.
+            </p>
+            <p>
+                History is very interesting to me, and it mainly manifests itself in listening to podcasts. I have a lot of unecessary
+                knowledge about antiquity and most of my political leanings are defined by history and current foreign affairs.
+            </p>
+        </div>
+        <h3>Technical Background</h3>
+        <p class="p16">
+            I graduated from MSU with a Bachelor of Science in physics. At MSU, I researched with the ATLAS collaboration from Jan
+            2021 to Oct 2023 analyzing "trigger" algorithms for ATLAS' research at the LHC. This consisted of data analysis using
+            python and some C++. If you're curious, feel free to ask me about it before or after class sometime... I could go on
+            forever about this (I'm the student who arrived late and sweaty the first day). Beyond this, I have more data analytics
+            and modeling experience from classwork at MSU. Lastly, I worked with React, Flask, and SQLite to design a personal
+            assistant that does not work very well. I'm excited that my team agreed to rework this pet project for this semester's
+            term project!
+        </p>
+        <h2>
+            Term Project Summary - <a href="https://garritr01.github.io/GVSU-CIS641-VAR_Group/">Website</a>
+        </h2>
+        <p class="p16">
+            VAR Group's goal is the creation a system that allows the user to schedule,
+            record, and analyze data from their life easily and in one place.
+        </p>
+            <div class="bulletList">
+            <p>
+                Scheduling - The user can schedule events on specific days, or recurring
+                daily, weekly, monthly, or annually and be reminded an hour
+                ahead of time if desired.
+            </p>
+            <p>
+                Recording - The user can design an interface specific to the event for
+                specific data collection of repeated events, or just notes.
+            </p>
+            <p>
+                Analysis - The user can visualize time usage and filter events by the 
+                data they've collected and compare other data points based on this 
+                filtration.
+            </p>
+            </div>
+        <p class="p16">
+            This project will both produce a personally beneficial system, and allow me
+            to gain invaluable experience. Designing software for deployment in a team is
+            a new experience for me that I expect to gain valuable programming and project
+            management experience from. 
+        </p>
+        </div>
+        <h2>Below are just templates for functions I'm working on...</h2>
+        <iframe id="introFrame" src="intro.html"></iframe>
+        <h1>Experience</h1>
+        <iframe id="resumeFrame" src="resume.html"></iframe>
+    </div>
 </body>
 </html>
